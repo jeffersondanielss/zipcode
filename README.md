@@ -14,7 +14,7 @@
 ```sh
 <script src="dist/zipcode-jquery.min.js"></script>
 <script>
-   $('#form').zipcode();
+   $('#yourForm').zipcode();
 </script>
 ```
 
@@ -23,7 +23,7 @@
 <script src="dist/zipcode.js"></script>
 <script>
    var z = new Zipcode({
-    form: '#form'
+    form: '#yourForm'
    });
 </script>
 ```
