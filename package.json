@@ -1,0 +1,25 @@
+{
+  "name": "fastslide.js",
+  "version": "1.2.0",
+  "description": "customizable, easy and quick application.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffersondanielss/fastslide.git"
+  },
+  "keywords": [
+    "jQuery",
+    "Slide",
+    "Carousel"
+  ],
+  "author": "jeffersondanielss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersondanielss/fastslide/issues"
+  },
+  "homepage": "https://github.com/jeffersondanielss/fastslide",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-uglify": "^0.9.1"
+  }
+}
