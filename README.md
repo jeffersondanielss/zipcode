@@ -1,5 +1,7 @@
 # Zipocde :house:
-> Completar os campos de endereço após preencher o campo de cep, apenas 883 bytes.
+> Completar os campos de endereço após preencher o campo de cep usando [postmon](https://github.com/PostmonAPI/postmon), apenas 883 bytes.
+
+[![Code Climate](https://codeclimate.com/github/jeffersondanielss/zipcode/badges/gpa.svg)](https://codeclimate.com/github/jeffersondanielss/zipcode) [![Test Coverage](https://codeclimate.com/github/jeffersondanielss/zipcode/badges/coverage.svg)](https://codeclimate.com/github/jeffersondanielss/zipcode/coverage)
 
 ![Alt Text](https://github.com/jeffersondanielss/zipcode/raw/gh-pages/images/zipcode.png)
 
