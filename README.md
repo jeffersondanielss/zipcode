@@ -1,8 +1,12 @@
 # Zipocde :house:
+> Completar os campos de endereço após preencher o campo de cep, apenas 883 bytes.
 
-### Basic markup form
+![Alt Text](https://github.com/jeffersondanielss/zipcode/raw/gh-pages/images/zipcode.png)
+
+
+### Markup básico
 ```sh
-<form id="#yourForm">
+<form id="yourForm">
   <input type="text" data-field="zipcode" />
   <input type="text" data-field="address" />
   <input type="text" data-field="city" />
@@ -10,20 +14,13 @@
   <input type="text" data-field="district" />
  </form>
 ```
-### jQuery zipcode
-```sh
-<script src="dist/zipcode-jquery.min.js"></script>
-<script>
-   $('#yourForm').zipcode();
-</script>
-```
 
-### Without jQuery
+### Inserir o plugin
 ```sh
-<script src="dist/zipcode.js"></script>
+<script src="src/zipcode.js"></script>
 <script>
-   var z = new Zipcode({
-    form: '#yourForm'
+   var newForm = new Zipcode({
+    form: 'yourForm'
    });
 </script>
 ```

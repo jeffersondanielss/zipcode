@@ -9,8 +9,7 @@ module.exports = function( grunt ) {
       },
       my_target: {
         files: {
-          'dist/zipcode.min.js': ['zipcode.js'],
-          'dist/zipcode-jquery.min.js': ['zipcode-jquery.js']
+          'src/zipcode.min.js': ['zipcode.js']
         }
       }
     }
