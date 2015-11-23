@@ -1,0 +1,37 @@
+.container {
+  margin: 0 auto;
+  width: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #444444;
+}
+
+.logo {
+  text-align: center;
+  display: block;
+}
+
+.legend {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.default-input {
+  background: #CCCCCC;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  border: none;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.send {
+  background: #8fd1b4;
+  border: none;
+  padding: 10px 25px;
+  float: right;
+}

@@ -1,30 +1,36 @@
 (function(document){
 
-  this.Zipcode = function(options) {
+  Zipcode = function(options) {
 
-    var _this = this;
+    var _this = this
+      , scope = document.getElementById(options.form)
+      , child = scope.children;
 
-    var defaults = {
-      form: '#form'
+    Zipcode.prototype.filterFields = function( field, current, jsonAddress ) {
+      switch( field ) {
+        case 'address':
+          current.value = jsonAddress.logradouro;
+          break;
+
+        case 'city':
+          current.value = jsonAddress.cidade;
+          break;
+
+        case 'state':
+          current.value = jsonAddress.estado;
+          break;
+
+        case 'district':
+          current.value = jsonAddress.bairro;
+          break;
+      }
     }
 
-    // Create options by extending defaults with the passed in arugments
-    if (arguments[0] && typeof arguments[0] === "object") {
-      this.options = extendDefaults(defaults, arguments[0]);
-    }
-
-    var scope = document.querySelector(this.options.form),
-        zipcode = scope.querySelector('[data-field="zipcode"]'),
-        address = scope.querySelector('[data-field="address"]'),
-        city = scope.querySelector('[data-field="city"]'),
-        state = scope.querySelector('[data-field="state"]'),
-        district = scope.querySelector('[data-field="district"]');
-
-    Zipcode.prototype.outputData = function(jsonAddress) {
-      address.value =  jsonAddress.logradouro;
-      city.value =  jsonAddress.cidade;
-      state.value =  jsonAddress.estado;
-      district.value =  jsonAddress.bairro;
+    Zipcode.prototype.insertData = function(jsonAddress) {
+      [].forEach.call(child, function(e){
+        var curr = e.getAttribute('data-field');
+        _this.filterFields( curr, e, jsonAddress );
+      });
     }
 
     Zipcode.prototype.getData = function(cep) {
@@ -34,7 +40,7 @@
       request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
           var data = JSON.parse(request.responseText);
-          _this.outputData(data);
+          _this.insertData(data);
         }
       };
 
@@ -45,26 +51,15 @@
       request.send();
     }
 
-    Zipcode.prototype.blurField = function() {
+    Zipcode.prototype.init = (function() {
+      var zipcode = document.querySelector('[data-field="zipcode"]');
+
       zipcode.addEventListener('blur', function() {
         var value = zipcode.value;
         _this.getData(value);
       }, true);
-    }
+    })();
 
-    this.blurField();
-
-  }
-
-  // Utility method to extend defaults with user options
-  function extendDefaults(source, properties) {
-    var property;
-    for (property in properties) {
-      if (properties.hasOwnProperty(property)) {
-        source[property] = properties[property];
-      }
-    }
-    return source;
   }
 
 })(document);
