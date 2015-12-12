@@ -1,10 +1,23 @@
 (function(document){
-
   Zipcode = function(options) {
 
     var _this = this
-      , scope = document.getElementById(options.form)
-      , child = scope.children;
+      , allForms = document.forms
+      , formExist = 0
+      , childs;
+
+    Zipcode.prototype.getForm = (function() {
+      Array.prototype.forEach.call(allForms, function(forms){
+        if(forms.id === options.form) {
+          childs = forms.elements;
+          formExist++;
+        }
+      });
+
+      if( !formExist ) {
+        console.log( '[Zipcode]: Doesn\'t exists any form with class: ' + options.form );
+      }
+    })();
 
     Zipcode.prototype.filterFields = function( field, current, jsonAddress ) {
       switch( field ) {
@@ -24,14 +37,14 @@
           current.value = jsonAddress.bairro;
           break;
       }
-    }
+    };
 
     Zipcode.prototype.insertData = function(jsonAddress) {
-      [].forEach.call(child, function(e){
-        var curr = e.getAttribute('data-field');
-        _this.filterFields( curr, e, jsonAddress );
+      Array.prototype.forEach.call(childs, function(input) {
+        var currAttribute = input.getAttribute('data-field');
+        _this.filterFields( currAttribute, input, jsonAddress );
       });
-    }
+    };
 
     Zipcode.prototype.getData = function(cep) {
       var request = new XMLHttpRequest();
@@ -63,4 +76,3 @@
   }
 
 })(document);
-
