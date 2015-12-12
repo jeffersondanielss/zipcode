@@ -1,22 +1,17 @@
 {
-  "name": "fastslide.js",
-  "version": "2.0.0",
-  "description": "customizable, easy and quick application.",
+  "name": "zipcode",
+  "version": "1.0.1",
+  "description": "Preencher campos do formulário automáticamente após inserir o cep",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeffersondanielss/fastslide.git"
+    "url": "https://github.com/jeffersondanielss/zipcode"
   },
-  "keywords": [
-    "jQuery",
-    "Slide",
-    "Carousel"
-  ],
   "author": "jeffersondanielss",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffersondanielss/fastslide/issues"
+    "url": "https://github.com/jeffersondanielss/zipcode/issues"
   },
-  "homepage": "https://github.com/jeffersondanielss/fastslide",
+  "homepage": "http://jeffersondanielss.github.io/zipcode/",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",

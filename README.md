@@ -1,5 +1,5 @@
 # Zipocde :house:
-> Completar os campos de endereço após preencher o campo de cep, apenas 883 bytes.
+> Completar os campos de endereço após preencher o campo de cep, apenas 1KB.
 
 ![Alt Text](https://github.com/jeffersondanielss/zipcode/raw/gh-pages/images/zipcode.png)
 
