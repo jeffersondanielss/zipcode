@@ -16,5 +16,9 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-uglify": "^0.9.1"
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "bower-requirejs": "^1.2.0"
   }
 }

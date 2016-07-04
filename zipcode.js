@@ -6,6 +6,10 @@
       , formExist = 0
       , childs;
 
+    Zipcode.prototype.teste = (function() {
+      return true;
+    }
+
     Zipcode.prototype.getForm = (function() {
       Array.prototype.forEach.call(allForms, function(forms){
         if(forms.id === options.form) {
