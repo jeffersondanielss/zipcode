@@ -6,10 +6,6 @@
       , formExist = 0
       , childs;
 
-    Zipcode.prototype.teste = (function() {
-      return true;
-    }
-
     Zipcode.prototype.getForm = (function() {
       Array.prototype.forEach.call(allForms, function(forms){
         if(forms.id === options.form) {
@@ -26,19 +22,19 @@
     Zipcode.prototype.filterFields = function( field, current, jsonAddress ) {
       switch( field ) {
         case 'address':
-          current.value = jsonAddress.logradouro;
+          current.setAttribute('value', jsonAddress.logradouro);
           break;
 
         case 'city':
-          current.value = jsonAddress.cidade;
+          current.setAttribute('value', jsonAddress.cidade);
           break;
 
         case 'state':
-          current.value = jsonAddress.estado;
+          current.setAttribute('value', jsonAddress.estado);
           break;
 
         case 'district':
-          current.value = jsonAddress.bairro;
+          current.setAttribute('value', jsonAddress.bairro);
           break;
       }
     };

@@ -7,18 +7,18 @@
 
 
 ### Markup básico
-```sh
+```html
 <form id="yourForm">
   <input type="text" data-field="zipcode" />
   <input type="text" data-field="address" />
   <input type="text" data-field="city" />
   <input type="text" data-field="state" />
   <input type="text" data-field="district" />
- </form>
+</form>
 ```
 
 ### Inserir o plugin
-```sh
+```html
 <script src="src/zipcode.js"></script>
 <script>
    var newForm = new Zipcode({
